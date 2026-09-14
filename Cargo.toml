@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "smaos-dora-kit",
+]
+resolver = "2"

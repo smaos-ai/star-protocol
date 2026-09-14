@@ -1,0 +1,13 @@
+{
+  "contract_id": "CONN-SN-CZ-001",
+  "source_systems": [
+    "SWIFT_ALLIANCE_GATEWAY",
+    "CORE_BANKING_POSTING_API",
+    "AUTONOMOUS_TREASURY_AGENT_L4"
+  ],
+  "declared_extraction_rows": 25000,
+  "extraction_window_start": "2026-09-01T00:00:00Z",
+  "extraction_window_end": "2026-09-10T23:59:59Z",
+  "responsible_operator": "Chief Risk Office / Incident Recovery Operations",
+  "schema_version": "1.0.5"
+}

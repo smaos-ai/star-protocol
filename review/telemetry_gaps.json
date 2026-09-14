@@ -1,0 +1,44 @@
+{
+  "report_version": "1.0.5",
+  "contract_id": "CONN-FEASIBILITY-250-v1",
+  "audit_window_start": "2026-09-10T00:00:00Z",
+  "audit_window_end": "2026-09-12T23:59:59Z",
+  "overall_telemetry_health": "DEGRADED_CONFIDENCE",
+  "schema_gaps": [
+    {
+      "gap_id": "GAP-SCHEMA-001",
+      "source_system": "CORE_BANKING_POSTING_API",
+      "field_or_event": "HTTP_504_TIMEOUT",
+      "gap_nature": "Downstream HTTP 504 gateway timeout suppresses final settlement confirmation receipt",
+      "observed_instances": 40,
+      "impact": "Requires state freeze in UNKNOWN; downstream ledger status indeterminate"
+    },
+    {
+      "gap_id": "GAP-SCHEMA-002",
+      "source_system": "RAW_STREAM_INGRESS",
+      "field_or_event": "JSON_SYNTAX_CORRUPTED",
+      "gap_nature": "Truncated or malformed lines without valid JSON syntax",
+      "observed_instances": 5,
+      "impact": "Preserved without discard at line numbers 246-250; excluded from automated state machine"
+    }
+  ],
+  "degraded_confidence_flags": [
+    {
+      "flag_code": "FLAG_DOWNSTREAM_TIMEOUT",
+      "description": "Unconfirmed settlement due to 40 unacknowledged downstream API responses",
+      "affected_action_count": 40,
+      "root_cause": "Timeout threshold exceeded without reconciliation callback"
+    },
+    {
+      "flag_code": "FLAG_CONCURRENT_CONFLICT",
+      "description": "State race collision on 5 concurrent transactions held for human review",
+      "affected_action_count": 5,
+      "root_cause": "Simultaneous conflicting state assertions without monotonic sequence lease"
+    }
+  ],
+  "recommended_client_remediations": [
+    "Deploy asynchronous webhook callback or poll-based state reconciliation for CORE_BANKING_POSTING_API",
+    "Enforce strict client-side JSON schema validation and framing before log transport",
+    "Implement monotonic sequence counter or distributed lease lock to prevent state race conflicts"
+  ]
+}

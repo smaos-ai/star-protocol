@@ -1,0 +1,408 @@
+{
+  "total_unknown_actions": 40,
+  "total_unconfirmed_cents": 585000000,
+  "currency": "EUR",
+  "retry_conflicts_count": 5,
+  "items": [
+    {
+      "action_id": "ACT-SWIFT-9901",
+      "amount_cents": 9750000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "HTTP 504 Gateway Timeout from downstream core banking settlement adapter",
+      "last_telemetry_iso": "2026-09-11T14:01:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9902",
+      "amount_cents": 10000000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "TCP Socket Reset (ECONNRESET) during SWIFT MT103 acknowledgement handoff",
+      "last_telemetry_iso": "2026-09-11T14:02:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9903",
+      "amount_cents": 10250000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Downstream posting API response timed out after 30,000ms latency ceiling",
+      "last_telemetry_iso": "2026-09-11T14:03:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9904",
+      "amount_cents": 10500000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Mutual TLS session terminated by clearinghouse gateway mid-handshake",
+      "last_telemetry_iso": "2026-09-11T14:04:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9905",
+      "amount_cents": 10750000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Idempotency token lookup exceeded 5,000ms deadline; post-dispatch unconfirmed",
+      "last_telemetry_iso": "2026-09-11T14:05:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9906",
+      "amount_cents": 11000000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Host-to-Host settlement link unresponsive during batch window switchover",
+      "last_telemetry_iso": "2026-09-11T14:06:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9907",
+      "amount_cents": 11250000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Core ledger response dropped by intermediary network ingress proxy",
+      "last_telemetry_iso": "2026-09-11T14:07:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9908",
+      "amount_cents": 11500000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Downstream circuit breaker tripped; dispatch state left indeterminate",
+      "last_telemetry_iso": "2026-09-11T14:08:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9909",
+      "amount_cents": 11750000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "HTTP 502 Bad Gateway received from payment switch upstream cluster",
+      "last_telemetry_iso": "2026-09-11T14:09:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9910",
+      "amount_cents": 12000000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Reconciliation probe failed with read timeout; zero effect receipt available",
+      "last_telemetry_iso": "2026-09-11T14:10:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9911",
+      "amount_cents": 12250000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "HTTP 504 Gateway Timeout from downstream core banking settlement adapter",
+      "last_telemetry_iso": "2026-09-11T14:11:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9912",
+      "amount_cents": 12500000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "TCP Socket Reset (ECONNRESET) during SWIFT MT103 acknowledgement handoff",
+      "last_telemetry_iso": "2026-09-11T14:12:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9913",
+      "amount_cents": 12750000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Downstream posting API response timed out after 30,000ms latency ceiling",
+      "last_telemetry_iso": "2026-09-11T14:13:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9914",
+      "amount_cents": 13000000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Mutual TLS session terminated by clearinghouse gateway mid-handshake",
+      "last_telemetry_iso": "2026-09-11T14:14:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9915",
+      "amount_cents": 13250000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Idempotency token lookup exceeded 5,000ms deadline; post-dispatch unconfirmed",
+      "last_telemetry_iso": "2026-09-11T14:15:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9916",
+      "amount_cents": 13500000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Host-to-Host settlement link unresponsive during batch window switchover",
+      "last_telemetry_iso": "2026-09-11T14:16:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9917",
+      "amount_cents": 13750000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Core ledger response dropped by intermediary network ingress proxy",
+      "last_telemetry_iso": "2026-09-11T14:17:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9918",
+      "amount_cents": 14000000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Downstream circuit breaker tripped; dispatch state left indeterminate",
+      "last_telemetry_iso": "2026-09-11T14:18:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9919",
+      "amount_cents": 14250000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "HTTP 502 Bad Gateway received from payment switch upstream cluster",
+      "last_telemetry_iso": "2026-09-11T14:19:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9920",
+      "amount_cents": 14500000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Reconciliation probe failed with read timeout; zero effect receipt available",
+      "last_telemetry_iso": "2026-09-11T14:20:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9921",
+      "amount_cents": 14750000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "HTTP 504 Gateway Timeout from downstream core banking settlement adapter",
+      "last_telemetry_iso": "2026-09-11T14:21:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9922",
+      "amount_cents": 15000000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "TCP Socket Reset (ECONNRESET) during SWIFT MT103 acknowledgement handoff",
+      "last_telemetry_iso": "2026-09-11T14:22:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9923",
+      "amount_cents": 15250000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Downstream posting API response timed out after 30,000ms latency ceiling",
+      "last_telemetry_iso": "2026-09-11T14:23:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9924",
+      "amount_cents": 15500000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Mutual TLS session terminated by clearinghouse gateway mid-handshake",
+      "last_telemetry_iso": "2026-09-11T14:24:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9925",
+      "amount_cents": 15750000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Idempotency token lookup exceeded 5,000ms deadline; post-dispatch unconfirmed",
+      "last_telemetry_iso": "2026-09-11T14:25:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9926",
+      "amount_cents": 16000000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Host-to-Host settlement link unresponsive during batch window switchover",
+      "last_telemetry_iso": "2026-09-11T14:26:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9927",
+      "amount_cents": 16250000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Core ledger response dropped by intermediary network ingress proxy",
+      "last_telemetry_iso": "2026-09-11T14:27:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9928",
+      "amount_cents": 16500000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Downstream circuit breaker tripped; dispatch state left indeterminate",
+      "last_telemetry_iso": "2026-09-11T14:28:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9929",
+      "amount_cents": 16750000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "HTTP 502 Bad Gateway received from payment switch upstream cluster",
+      "last_telemetry_iso": "2026-09-11T14:29:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9930",
+      "amount_cents": 17000000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Reconciliation probe failed with read timeout; zero effect receipt available",
+      "last_telemetry_iso": "2026-09-11T14:30:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9931",
+      "amount_cents": 17250000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "HTTP 504 Gateway Timeout from downstream core banking settlement adapter",
+      "last_telemetry_iso": "2026-09-11T14:31:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9932",
+      "amount_cents": 17500000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "TCP Socket Reset (ECONNRESET) during SWIFT MT103 acknowledgement handoff",
+      "last_telemetry_iso": "2026-09-11T14:32:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9933",
+      "amount_cents": 17750000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Downstream posting API response timed out after 30,000ms latency ceiling",
+      "last_telemetry_iso": "2026-09-11T14:33:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9934",
+      "amount_cents": 18000000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Mutual TLS session terminated by clearinghouse gateway mid-handshake",
+      "last_telemetry_iso": "2026-09-11T14:34:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9935",
+      "amount_cents": 18250000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Idempotency token lookup exceeded 5,000ms deadline; post-dispatch unconfirmed",
+      "last_telemetry_iso": "2026-09-11T14:35:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9936",
+      "amount_cents": 18500000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Host-to-Host settlement link unresponsive during batch window switchover",
+      "last_telemetry_iso": "2026-09-11T14:36:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9937",
+      "amount_cents": 18750000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Core ledger response dropped by intermediary network ingress proxy",
+      "last_telemetry_iso": "2026-09-11T14:37:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9938",
+      "amount_cents": 19000000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Downstream circuit breaker tripped; dispatch state left indeterminate",
+      "last_telemetry_iso": "2026-09-11T14:38:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9939",
+      "amount_cents": 19250000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "HTTP 502 Bad Gateway received from payment switch upstream cluster",
+      "last_telemetry_iso": "2026-09-11T14:39:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    },
+    {
+      "action_id": "ACT-SWIFT-9940",
+      "amount_cents": 19500000,
+      "currency": "EUR",
+      "last_observed_state": "UNKNOWN",
+      "reason": "Reconciliation probe failed with read timeout; zero effect receipt available",
+      "last_telemetry_iso": "2026-09-11T14:40:30.000Z",
+      "duration_indeterminate_seconds": 1845,
+      "source_adapter": "CORE_BANKING_POSTING_API"
+    }
+  ]
+}

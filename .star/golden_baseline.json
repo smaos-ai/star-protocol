@@ -1,0 +1,232 @@
+{
+  "version": "1.0-decadal",
+  "slsa_level": "SLSA_BUILD_LEVEL_3+",
+  "receipt_type": "GOLDEN_BASELINE",
+  "timestamp": "2026-09-14T13:36:01Z",
+  "audit_truth_fields": {
+    "authorization_decision": "PERMIT",
+    "human_principal": "sig:ed25519:6650fa5ef6fcfe8af2dd721ead1ee3a2",
+    "intent_mandate": "cd8ae04bc807016a356f6d9dd70a47af4de784de062d6b0259c9f0de1da4db3a",
+    "environment_fingerprint": "b6f21b2900102f00221272242f2fbe073f57f29113509d7a9a640a4191f93e82",
+    "tamper_evidence": "412e433b8ed7d4d6b59ee7958875cc934296881aaa8cc373bb31b31be7f75f0a"
+  },
+  "merkle_root": "412e433b8ed7d4d6b59ee7958875cc934296881aaa8cc373bb31b31be7f75f0a",
+  "signature": "sig:ed25519:6650fa5ef6fcfe8af2dd721ead1ee3a2",
+  "offline_mode": true,
+  "ast_node_count": 25,
+  "retro_story_mappings": [
+    {
+      "story_id": "STORY-001",
+      "name": "Treasury Authorization",
+      "status": "VERIFIED"
+    },
+    {
+      "story_id": "STORY-002",
+      "name": "Layer 4 DLP Gate Enforcement",
+      "status": "VERIFIED"
+    },
+    {
+      "story_id": "STORY-003",
+      "name": "Layer 8 Cryptographic Attestation",
+      "status": "VERIFIED"
+    }
+  ],
+  "nodes": [
+    {
+      "file": "scripts/star_legacy_freeze.py",
+      "hash": "0339284812f1cf39e5eccce3559437f5c0d912f20f92f501f5130082982aa022",
+      "leaf_hash": "3ff042e6c0b9e48bc993f2f004f3038558f63382bde3bcd2d2870c8201fbaf7f",
+      "classes": [
+        "StarLegacyFreeze"
+      ],
+      "functions_count": 5
+    },
+    {
+      "file": "scripts/star_legacy_verify.py",
+      "hash": "37f2ec0ebeed05c23ac4ce2e3c92b1021d0efb19ab24030f2a42f4513d030dad",
+      "leaf_hash": "e3e838a8e26aa025814f24639b420ec3a7f467a29bd2dc6d1178490a825886b5",
+      "classes": [
+        "StarLegacyVerify"
+      ],
+      "functions_count": 5
+    },
+    {
+      "file": "smaos-dora-kit/examples/basic_timeline.rs",
+      "hash": "bad9cb472c742552a2525245f5486e4011cab890b704b54ed079006dd7ae3de5",
+      "leaf_hash": "eae5a57c90ab7a2fa292d79cfd1f25b84152d9115661fbd9c1471e95fed0ea5a",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/examples/offline_verifier.js",
+      "hash": "d38999f987e85ea0ce28be3fe9e6052d161aec20d38380193d24a0cd1bc6122e",
+      "leaf_hash": "c3e17eff6773bbc30ad24bccf33ab9af47535412177018875df2ec0f8f0d7c13",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/smaos_dora_kit.py",
+      "hash": "c605e3148628318c0b610ef2f2a3555766fcb8dcb1120d86d1d7944f55e861ad",
+      "leaf_hash": "16e55f10002d588a763d864bf2504ffd55cee38fa5b98602e68563bac402b44f",
+      "classes": [
+        "JournalEvent",
+        "DoraJournal",
+        "TimelinePhase",
+        "ReconstructedTimeline",
+        "DoraTimelineReconstructor",
+        "DoraDeadline",
+        "DoraCountdownStatus",
+        "DoraClockEngine",
+        "ThresholdMetrics",
+        "ThresholdEvaluation",
+        "DoraThresholdEngine",
+        "DoraScenarioGenerator"
+      ],
+      "functions_count": 17
+    },
+    {
+      "file": "smaos-dora-kit/src/bin/export_bundle.rs",
+      "hash": "8d50b9dbef25ccfc79ef09dcd6b14f314bcfb86d4b16221d71dbf2e398f15b9d",
+      "leaf_hash": "bb8c602bbbfabe2dce56cf3a1702a5c4b9ed649ceacafc2ef439417fca723f7c",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/bin/smaos_audit.rs",
+      "hash": "875b67355f4f61e9f9dbd933c23c7b3762a943c83721a6668721d1e5e8452717",
+      "leaf_hash": "e46d61355cc410bcf4d6258e1b4cfa5a88c6c15a2eaea8d4f7f65e87d7095a47",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/bin/smaos_intake_check.rs",
+      "hash": "c763964266bd7de8f4c14c1856aa2799e29b08d2b65c93a62f5f4845a7f8556c",
+      "leaf_hash": "a5784c6a93fe9cf94443fbcf3d1dc3b269654b1ab31db97d0b70039d416e3e0c",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/bin/smaos_review.rs",
+      "hash": "41db6181c27f55d5b02768e56a9bf83417322f58ec0903d19a2616d2b4459976",
+      "leaf_hash": "10dbe3f7594c44dab65fdada0cfdbc76ec87493df9312bca3f4375c1198e23bd",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/clock.rs",
+      "hash": "4d8401c0b33ea44a715e3aa0a8c09ba0e16e469de1ae4d670bf64ff5ec9e3d33",
+      "leaf_hash": "82c68e1c86117a126350951623fe5c1927d14914e33191b6998b7f72ceedcd7e",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/config_lineage.rs",
+      "hash": "31c86eeb6020c7296614d2910fd3dc8bd72fe28d201c5bfdce7aa9872261aa7f",
+      "leaf_hash": "87232a304bbdc4ae02f43ccd32bef313f23a82881145127aa07b748168da62ab",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/exposure.rs",
+      "hash": "e428caec8095f7bdbb56f927681b4748b4851eb164de31b88db02c624fb32d7f",
+      "leaf_hash": "0195b3bb0f2cc1f87113cda646b833ca2b66d03790eb0dd10ad13ce4ef60b9dd",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/journal.rs",
+      "hash": "96d42d668a7e9633ca9c3870ace5c8ed4a85c24b42a29cc0545740853b96ef66",
+      "leaf_hash": "33881521127e9278f5319a777c699d117c7227a2b5e0448d6bdffc439e690fad",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/lib.rs",
+      "hash": "8e580ccc63006e1829c91803a090879fed7053a71fb476fe1a387a0dcddf9c0d",
+      "leaf_hash": "44012934d9cc73b5e5320145640fe902789f489429208c7fc29c6c8c3ea2cf8d",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/main.rs",
+      "hash": "41db6181c27f55d5b02768e56a9bf83417322f58ec0903d19a2616d2b4459976",
+      "leaf_hash": "7e8542a8bec63841ebff8d1083a7e5a2a15d4841374eaebf72eeaf55358b1dcd",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/obligations.rs",
+      "hash": "3503f1f3d48bfaaee8b2f535e90b301e75193678c877f201a571ff54e8bba0d1",
+      "leaf_hash": "381e965c49b0e151431b9b27d14b9f10de7e78cfd9e0272716ead6ae8760baf4",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/protocol_drift.rs",
+      "hash": "51cb45c57b175a1efb9b1c22f20cadb58d8a829a7e17411afdf475f0a9d69e16",
+      "leaf_hash": "7218b7b52f0f4bfda040143294a8c8f39d76a0efac0b60f3375becef8d2552fa",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/review.rs",
+      "hash": "bf5198f909b84b2e2f41874e530d3d31dfb41a8b68e4a276b56d6fee9eb64c44",
+      "leaf_hash": "832179c52f2a219fc932f5f99215055741f07d4e11ca4d3f37e376010bc30a4b",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/scenario.rs",
+      "hash": "dedc6b331feaa23681f22e1e6437b4995888cdb26509115c4554e9ad72fd8e98",
+      "leaf_hash": "bf4fa85c7a6cdfacdcd71714b4717d81d4b7c206a9d7584059e2d77c4a65cc46",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/threshold.rs",
+      "hash": "cc176973ff92f20092efd514004d0f9074a4b24edf854e14b5a2e2b2e0870a9e",
+      "leaf_hash": "d123281f7d52a830083ab132daaea34ca54096189f4d5b6e81db792c2e580061",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/src/timeline.rs",
+      "hash": "fb21c0db1f19174d1719700dc8f53c866ce7acd9d83433600ea1bbcfc6aa763d",
+      "leaf_hash": "67c1f0a6851e315d83e53ce68bb4ff51ab862ea3b88ade950a7f5d23731f4d86",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "smaos-dora-kit/tests/test_dora_conformance.py",
+      "hash": "9f271d53b489e8b367897e2ea2902f52f2d3fc1770b4a7ebe520a2ebf5ee46f0",
+      "leaf_hash": "2b449a1b3a73beb67d773417fe1025c40736d3cf0dfdc90f74e05d252c2c0b08",
+      "classes": [],
+      "functions_count": 6
+    },
+    {
+      "file": "star_protocol/__init__.py",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leaf_hash": "bac91f9aa44921c5b2f7754574674635c2a3d4fd9f2719a4ee3b78a7bf4714fb",
+      "classes": [],
+      "functions_count": 0
+    },
+    {
+      "file": "star_protocol/core.py",
+      "hash": "7ce55d815c8990acabb1a3b17f28d6217543b72560ab7d4182d675913de88b54",
+      "leaf_hash": "62b929ee0a02fc902375e4e1e920ed1af595258824921ce352e757e35b053cde",
+      "classes": [
+        "StarTestRunner"
+      ],
+      "functions_count": 17
+    },
+    {
+      "file": "star_protocol/receipt.py",
+      "hash": "b567838ae18c1ac260185700a90f54e5d110cf11ee62975f0983087406f157a5",
+      "leaf_hash": "4b907d2611a8567b06c05aa5f926d9fce0b49fd1b7a976730322dac2e3283f9f",
+      "classes": [
+        "Receipt"
+      ],
+      "functions_count": 4
+    }
+  ]
+}

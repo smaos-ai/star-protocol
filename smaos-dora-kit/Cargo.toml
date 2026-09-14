@@ -1,0 +1,39 @@
+[package]
+name = "smaos-dora-kit"
+version = "1.0.0"
+edition = "2021"
+authors = ["Andrei Leukhin <andrejlo123@gmail.com>"]
+license = "Apache-2.0"
+description = "SMAOS DORA AI Incident Closure Engine — Tabletop Kit & Verification Black Box"
+repository = "https://github.com/sovreignnexus/smaos-dora-kit"
+default-run = "smaos-dora-kit"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+hex = "0.4"
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "1"
+uuid = { version = "1", features = ["v4", "serde"] }
+ed25519-dalek = { version = "2.2", default-features = false }
+
+[[bin]]
+name = "smaos-dora-kit"
+path = "src/main.rs"
+
+[[bin]]
+name = "smaos-review"
+path = "src/bin/smaos_review.rs"
+
+[[bin]]
+name = "smaos-intake-check"
+path = "src/bin/smaos_intake_check.rs"
+
+[[bin]]
+name = "smaos_audit"
+path = "src/bin/smaos_audit.rs"
+
+[[bin]]
+name = "export_bundle"
+path = "src/bin/export_bundle.rs"

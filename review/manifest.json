@@ -1,0 +1,41 @@
+{
+  "manifest_version": "1.0.5",
+  "sprint_type": "STAR_EUR750_DATA_FEASIBILITY_SPRINT",
+  "correlation_id": "STAR-FEASIBILITY-2026-09-001",
+  "git_commit_hash": "16643bbef4e4f13383f34b28f07886db308691e4",
+  "generated_at_iso": "2026-09-14T13:35:29.900729+00:00",
+  "merkle_root_sha256": "5a4f3eadbc76cf496c4d02225a0cb779dec994c4e52583206befafd5af94d1b5",
+  "total_verified_records": 250,
+  "ed25519_signature_hex": "b6d734f2db557bdfc62c4780c4be935aab17ce55636fe77158db5c90138a90f0311f7b0aa888b123479d79e66b2cd1070c7c912507dc8b893dfd72f7de43cc04",
+  "signer_public_key_hex": "0c94f504e2ab8fbb71715c2eddb3154be2415a263799e5d2a5fc1868033389d1",
+  "artifacts": [
+    {
+      "filename": "conservation_scorecard.json",
+      "sha256": "57b0a23797727f3ca404cc7602797c7fe7983329fb11d4e1ec4bed07200ddea5"
+    },
+    {
+      "filename": "unknown_exposure_inventory.json",
+      "sha256": "8dda15d7d28359503e6e548e7c1b996d161d516719f7c85b7a52b5067670a0cb"
+    },
+    {
+      "filename": "telemetry_gaps.json",
+      "sha256": "122df57f6641ed7a14e27fab4c74745d596ca9309bf4e1300f96abb854c28e4f"
+    },
+    {
+      "filename": "evidence_insufficient_or_findings.json",
+      "sha256": "eca8e095521773773f7c8613d1be24417270d852ef0206ba94e6c5acd9468b83"
+    },
+    {
+      "filename": "replay.json",
+      "sha256": "b0c2f827c84f2b2c438ed7cc3d9aaf25cb9f2f6d4cca2922041a40870cfca841"
+    },
+    {
+      "filename": "limitations.md",
+      "sha256": "be7a1184a09ef2d1952ae7436efef75841d012913dbdc51ed04fdc53536c659e"
+    },
+    {
+      "filename": "processing_and_deletion_record.json",
+      "sha256": "0fcabb83d8c229737b6acf96cbff2e16178bc490377a0a353b6ce7faae8f36dd"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "scenario_name": "DORA Article 24 Ghost Incident Drill: SWIFT Wire Transfer Partition",
+  "description": "Simulates post-dispatch telemetry drop where agent claims success but core ledger times out, triggering UNKNOWN preservation and human dual-control recovery",
+  "events": [
+    {
+      "sequence": 1,
+      "action_id": "ACT-SWIFT-9901",
+      "event_kind": {
+        "type": "Proposed",
+        "data": {
+          "action_id": "ACT-SWIFT-9901",
+          "risk_tier": "T3_CRITICAL"
+        }
+      },
+      "timestamp_wall_iso": "2026-09-14T08:00:00Z",
+      "timestamp_mono_ns": 1000000000,
+      "timestamp_ext_time": 1726300800,
+      "clock_uncertainty_ms": 5,
+      "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "event_hash": "9fb1d00918450094a31639dc9f8f468947d86bbac7413eefdd6be34c323ed0d3"
+    },
+    {
+      "sequence": 2,
+      "action_id": "ACT-SWIFT-9901",
+      "event_kind": {
+        "type": "Authorized",
+        "data": {
+          "permit_id": "PERMIT-CRO-84920",
+          "scope": "WIRE_TRANSFER_1850000_EUR"
+        }
+      },
+      "timestamp_wall_iso": "2026-09-14T08:00:02Z",
+      "timestamp_mono_ns": 1002000000,
+      "timestamp_ext_time": 1726300802,
+      "clock_uncertainty_ms": 5,
+      "prev_hash": "9fb1d00918450094a31639dc9f8f468947d86bbac7413eefdd6be34c323ed0d3",
+      "event_hash": "1295705066806773ee92d05c62822f46adf090af737e6d168ae1aae9c2d3253d"
+    },
+    {
+      "sequence": 3,
+      "action_id": "ACT-SWIFT-9901",
+      "event_kind": {
+        "type": "Dispatched",
+        "data": {
+          "destination": "CORE_BANKING_SWIFT_GATEWAY"
+        }
+      },
+      "timestamp_wall_iso": "2026-09-14T08:00:05Z",
+      "timestamp_mono_ns": 1005000000,
+      "timestamp_ext_time": 1726300805,
+      "clock_uncertainty_ms": 5,
+      "prev_hash": "1295705066806773ee92d05c62822f46adf090af737e6d168ae1aae9c2d3253d",
+      "event_hash": "0a1987e9bc406d26cb276cb265af64df662d44c1db91b915f24c564eab569a79"
+    },
+    {
+      "sequence": 4,
+      "action_id": "ACT-SWIFT-9901",
+      "event_kind": {
+        "type": "AgentClaimedSuccess",
+        "data": {
+          "claim_digest": "sha256:4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        }
+      },
+      "timestamp_wall_iso": "2026-09-14T08:00:10Z",
+      "timestamp_mono_ns": 1010000000,
+      "timestamp_ext_time": null,
+      "clock_uncertainty_ms": 50,
+      "prev_hash": "0a1987e9bc406d26cb276cb265af64df662d44c1db91b915f24c564eab569a79",
+      "event_hash": "44cc900815c0e4d6f728edefdf4ffd26508debf814cda0204522b2c9a14d73ab"
+    },
+    {
+      "sequence": 5,
+      "action_id": "ACT-SWIFT-9901",
+      "event_kind": {
+        "type": "ReconciliationAttempt",
+        "data": {
+          "adapter_id": "ADAPTER_SWIFT_CORE_REST"
+        }
+      },
+      "timestamp_wall_iso": "2026-09-14T08:00:15Z",
+      "timestamp_mono_ns": 1015000000,
+      "timestamp_ext_time": 1726300815,
+      "clock_uncertainty_ms": 10,
+      "prev_hash": "44cc900815c0e4d6f728edefdf4ffd26508debf814cda0204522b2c9a14d73ab",
+      "event_hash": "0d06e3d2379770555695ce6959c59134a36eea3f484be2d46901d1a6cfa0fbcb"
+    },
+    {
+      "sequence": 6,
+      "action_id": "ACT-SWIFT-9901",
+      "event_kind": {
+        "type": "ReconciliationResult",
+        "data": {
+          "status": "Timeout",
+          "effect_digest": null
+        }
+      },
+      "timestamp_wall_iso": "2026-09-14T08:00:30Z",
+      "timestamp_mono_ns": 1030000000,
+      "timestamp_ext_time": 1726300830,
+      "clock_uncertainty_ms": 10,
+      "prev_hash": "0d06e3d2379770555695ce6959c59134a36eea3f484be2d46901d1a6cfa0fbcb",
+      "event_hash": "cab55bc2d27889936bdc806128b2d29328a90423bb415f3e2a8959b47102c6a5"
+    },
+    {
+      "sequence": 7,
+      "action_id": "ACT-SWIFT-9901",
+      "event_kind": {
+        "type": "UnknownDeclared",
+        "data": {
+          "reason": "External system of record timeout; post-dispatch effect unconfirmed"
+        }
+      },
+      "timestamp_wall_iso": "2026-09-14T08:00:31Z",
+      "timestamp_mono_ns": 1031000000,
+      "timestamp_ext_time": 1726300831,
+      "clock_uncertainty_ms": 5,
+      "prev_hash": "cab55bc2d27889936bdc806128b2d29328a90423bb415f3e2a8959b47102c6a5",
+      "event_hash": "f8c3483cf7ceff25e5dc08256e543f5c5b12d89e25abd7198f8eeb5039edbad0"
+    },
+    {
+      "sequence": 8,
+      "action_id": "ACT-SWIFT-9901",
+      "event_kind": {
+        "type": "DependencyHalted",
+        "data": {
+          "halted_action_ids": [
+            "DISBURSE-WIRE-9902",
+            "POSTING-LEDGER-9903"
+          ]
+        }
+      },
+      "timestamp_wall_iso": "2026-09-14T08:00:32Z",
+      "timestamp_mono_ns": 1032000000,
+      "timestamp_ext_time": 1726300832,
+      "clock_uncertainty_ms": 5,
+      "prev_hash": "f8c3483cf7ceff25e5dc08256e543f5c5b12d89e25abd7198f8eeb5039edbad0",
+      "event_hash": "5b6617c7b2c9ef33014256b0d5f3e9b156eebd80b3115466db2e766f872414a8"
+    },
+    {
+      "sequence": 9,
+      "action_id": "ACT-SWIFT-9901",
+      "event_kind": {
+        "type": "IncidentAssessmentRecorded",
+        "data": {
+          "assessment": "Major",
+          "assessed_by": "CRO_ALICE_SLOT9C",
+          "signature": "sig:ed25519:7b69201948ba394c8e718293810293"
+        }
+      },
+      "timestamp_wall_iso": "2026-09-14T08:15:00Z",
+      "timestamp_mono_ns": 1900000000,
+      "timestamp_ext_time": 1726301700,
+      "clock_uncertainty_ms": 5,
+      "prev_hash": "5b6617c7b2c9ef33014256b0d5f3e9b156eebd80b3115466db2e766f872414a8",
+      "event_hash": "91dab76fce5bb079a5082b58bf2f3748fe40cdfd92d5f36fd78f9192aaa9f6b1"
+    },
+    {
+      "sequence": 10,
+      "action_id": "ACT-SWIFT-9901",
+      "event_kind": {
+        "type": "RecoveryApproved",
+        "data": {
+          "operator_1": "CRO_ALICE_SLOT9C",
+          "sig_1": "sig:alice:482910",
+          "operator_2": "CISO_BOB_SLOT9C",
+          "sig_2": "sig:bob:194820",
+          "nonce": "nonce-rec-2026-09-14-001"
+        }
+      },
+      "timestamp_wall_iso": "2026-09-14T08:45:00Z",
+      "timestamp_mono_ns": 3700000000,
+      "timestamp_ext_time": 1726303500,
+      "clock_uncertainty_ms": 5,
+      "prev_hash": "91dab76fce5bb079a5082b58bf2f3748fe40cdfd92d5f36fd78f9192aaa9f6b1",
+      "event_hash": "75a5804818759220202c629ee94e964d4f7e6507472f6950365679939c465422"
+    }
+  ],
+  "final_hash": "75a5804818759220202c629ee94e964d4f7e6507472f6950365679939c465422",
+  "total_events": 10
+}

@@ -1,0 +1,86 @@
+{
+  "contract_id": "CONN-FEASIBILITY-250-v1",
+  "declared_extraction_rows": 250,
+  "accepted_event_rows": 200,
+  "state_transition_rows": 40,
+  "retransmissions": 0,
+  "malformed_rows": 5,
+  "conflict_rows": 5,
+  "total_accounted_rows": 250,
+  "delta": 0,
+  "is_conserved": true,
+  "row_accounting_equation": "200 (Confirmed) + 40 (Unknown) + 5 (Conflict) + 5 (Malformed) = 250 (Declared: 250) [Δ = 0]",
+  "business_transaction_metrics": {
+    "distinct_action_ids": 240,
+    "confirmed_actions": 200,
+    "unconfirmed_unknown_actions": 40,
+    "gross_unresolved_nominal_cents": 585000000
+  },
+  "primary_dispositions": {
+    "confirmed": 200,
+    "unknown": 40,
+    "conflict_held": 5,
+    "malformed": 5,
+    "total_dispositions": 250,
+    "delta": 0
+  },
+  "secondary_findings_map": {
+    "downstream_gateway_timeouts": 40,
+    "race_condition_retransmissions": 0,
+    "malformed_payload_lines": 5,
+    "gross_unresolved_nominal_cents": 585000000,
+    "currency": "EUR"
+  },
+  "rejected_rows_sample": [
+    {
+      "line_number": 241,
+      "raw_snippet": "{\"row_type\": \"CONFLICT\", \"action_id\": \"ACT-SPLIT-01\", \"nonce\": \"NONCE-CONF-01\", ",
+      "rejection_reason": "Conflicting state update rejected fail-closed"
+    },
+    {
+      "line_number": 242,
+      "raw_snippet": "{\"row_type\": \"CONFLICT\", \"action_id\": \"ACT-SPLIT-02\", \"nonce\": \"NONCE-CONF-02\", ",
+      "rejection_reason": "Conflicting state update rejected fail-closed"
+    },
+    {
+      "line_number": 243,
+      "raw_snippet": "{\"row_type\": \"CONFLICT\", \"action_id\": \"ACT-SPLIT-03\", \"nonce\": \"NONCE-CONF-03\", ",
+      "rejection_reason": "Conflicting state update rejected fail-closed"
+    },
+    {
+      "line_number": 244,
+      "raw_snippet": "{\"row_type\": \"CONFLICT\", \"action_id\": \"ACT-SPLIT-04\", \"nonce\": \"NONCE-CONF-04\", ",
+      "rejection_reason": "Conflicting state update rejected fail-closed"
+    },
+    {
+      "line_number": 245,
+      "raw_snippet": "{\"row_type\": \"CONFLICT\", \"action_id\": \"ACT-SPLIT-05\", \"nonce\": \"NONCE-CONF-05\", ",
+      "rejection_reason": "Conflicting state update rejected fail-closed"
+    },
+    {
+      "line_number": 246,
+      "raw_snippet": "MALFORMED_RAW_STREAM_LINE_01_CORRUPTED_JSON_MISSING_BRACE {\"action_id\": \"ERR-1\"",
+      "rejection_reason": "Malformed JSON: expected value at line 1 column 1"
+    },
+    {
+      "line_number": 247,
+      "raw_snippet": "MALFORMED_RAW_STREAM_LINE_02_CORRUPTED_JSON_MISSING_BRACE {\"action_id\": \"ERR-2\"",
+      "rejection_reason": "Malformed JSON: expected value at line 1 column 1"
+    },
+    {
+      "line_number": 248,
+      "raw_snippet": "MALFORMED_RAW_STREAM_LINE_03_CORRUPTED_JSON_MISSING_BRACE {\"action_id\": \"ERR-3\"",
+      "rejection_reason": "Malformed JSON: expected value at line 1 column 1"
+    },
+    {
+      "line_number": 249,
+      "raw_snippet": "MALFORMED_RAW_STREAM_LINE_04_CORRUPTED_JSON_MISSING_BRACE {\"action_id\": \"ERR-4\"",
+      "rejection_reason": "Malformed JSON: expected value at line 1 column 1"
+    },
+    {
+      "line_number": 250,
+      "raw_snippet": "MALFORMED_RAW_STREAM_LINE_05_CORRUPTED_JSON_MISSING_BRACE {\"action_id\": \"ERR-5\"",
+      "rejection_reason": "Malformed JSON: expected value at line 1 column 1"
+    }
+  ]
+}

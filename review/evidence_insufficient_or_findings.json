@@ -1,0 +1,20 @@
+{
+  "verdict": "FINDINGS",
+  "verdict_code": "STAR-VRD-FINDINGS",
+  "three_outcome_possibilities": [
+    "FINDINGS",
+    "NO FINDINGS",
+    "INSUFFICIENT"
+  ],
+  "verdict_summary": "40 unconfirmed downstream actions (€5850000.00) and 5 conflict-held transactions detected. Material telemetry gaps prevent automated closure.",
+  "justification": "Under EU AI Act Art. 12/14 and DORA Art. 18, unconfirmed downstream effects must be preserved as UNKNOWN rather than assumed confirmed. The presence of unconfirmed actions requires human CRO / Risk Committee disposition.",
+  "unknown_actions_count": 40,
+  "conflict_held_count": 5,
+  "malformed_rows_count": 5,
+  "confirmed_actions_count": 200,
+  "gross_unconfirmed_nominal_cents": 585000000,
+  "currency": "EUR",
+  "threshold_breached": true,
+  "human_signoff_required": true,
+  "next_statutory_step": "Present unknown exposure inventory to Human Risk Committee for authoritative classification."
+}

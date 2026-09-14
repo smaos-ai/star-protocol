@@ -1,0 +1,92 @@
+{
+  "legal_disclaimer": "Actual avoided loss is not directly measurable from replay alone. Replay models deterministic policy gates under counterfactual telemetry drops.",
+  "replay_id": "STAR-REPLAY-2026-09-001",
+  "incident_reference": "STAR-FEASIBILITY-250",
+  "historical_baseline_uncontained_exposure_cents": 585000000,
+  "modeled_policy_hold_uncontained_exposure_cents": 0,
+  "avoided_risk_cascade_actions_count": 40,
+  "safe_mode_halt_triggered": true,
+  "human_dual_control_enforced": true,
+  "steps": [
+    {
+      "step": "T0",
+      "timestamp_offset_ms": 0,
+      "event_name": "BatchExecutionInitiated",
+      "system": "AUTONOMOUS_TREASURY_AGENT_L4",
+      "state": "PROPOSED",
+      "assertion": "250 operations submitted for execution under pre-configured policy limits"
+    },
+    {
+      "step": "T1",
+      "timestamp_offset_ms": 120,
+      "event_name": "PreDispatchPolicyGate",
+      "system": "STAR_GATEWAY",
+      "state": "PERMITTED",
+      "assertion": "Static rules and Basel III capital adequacy thresholds verified"
+    },
+    {
+      "step": "T2",
+      "timestamp_offset_ms": 450,
+      "event_name": "DispatchedConfirmedBatch",
+      "system": "SWIFT_ALLIANCE_GATEWAY",
+      "state": "CONFIRMED",
+      "assertion": "200 transactions successfully dispatched and confirmed via SWIFT network"
+    },
+    {
+      "step": "T3",
+      "timestamp_offset_ms": 1250,
+      "event_name": "DownstreamSettlementTimeout",
+      "system": "CORE_BANKING_POSTING_API",
+      "state": "504_TIMEOUT",
+      "assertion": "40 actions (ACT-SWIFT-9901..9940) encounter HTTP 504 gateway timeout"
+    },
+    {
+      "step": "T4",
+      "timestamp_offset_ms": 1400,
+      "event_name": "CounterfactualBaselineDivergence",
+      "system": "UNCONSTRAINED_AGENT_BASELINE",
+      "state": "UNSAFE_RETRY",
+      "assertion": "Without STAR, agent would retry 40 unconfirmed actions, creating duplicate payment risk"
+    },
+    {
+      "step": "T5",
+      "timestamp_offset_ms": 1550,
+      "event_name": "PolicyHoldIntervention",
+      "system": "STAR_GOVERNANCE_HARNESS",
+      "state": "UNKNOWN_LOCKED",
+      "assertion": "STAR Policy Hold clamps 40 unconfirmed actions into immutable UNKNOWN; duplicate dispatches blocked"
+    },
+    {
+      "step": "T6",
+      "timestamp_offset_ms": 1800,
+      "event_name": "ConcurrentStateConflictDetected",
+      "system": "CORE_BANKING_POSTING_API",
+      "state": "CONFLICT_HELD",
+      "assertion": "5 split actions (ACT-SPLIT-01..05) exhibit conflicting state assertions; clamped fail-closed"
+    },
+    {
+      "step": "T7",
+      "timestamp_offset_ms": 2100,
+      "event_name": "SafeModeHaltEnforced",
+      "system": "STAR_GATEKEEPER",
+      "state": "SAFE_MODE_HALT",
+      "assertion": "Automated pipeline halted; human dual-control alert dispatched to CISO/CRO on-call"
+    },
+    {
+      "step": "T8",
+      "timestamp_offset_ms": 2400,
+      "event_name": "ZeroDeltaConservationAudit",
+      "system": "STAR_AUDIT_ENGINE",
+      "state": "CONSERVED",
+      "assertion": "Delta = 0 verified: 200 Confirmed + 40 Unknown + 5 Conflict + 5 Malformed = 250 Input Rows"
+    },
+    {
+      "step": "T9",
+      "timestamp_offset_ms": 2800,
+      "event_name": "CryptographicReceiptFrozen",
+      "system": "STAR_PROOF_LAYER",
+      "state": "FROZEN",
+      "assertion": "JCS SHA-256 Merkle root computed and Ed25519 signature generated; receipt stored offline"
+    }
+  ]
+}

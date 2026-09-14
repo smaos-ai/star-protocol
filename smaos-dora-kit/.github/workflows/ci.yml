@@ -1,0 +1,94 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  rust-quality-gates:
+    name: Rust Quality Gates & Zero-Unwrap Linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Rust toolchain (1.80+)
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - name: Cache cargo dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock', '**/Cargo.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Gate 1: Cargo fmt check
+        run: cargo fmt --all -- --check
+
+      - name: Gate 2: Strict Clippy & Zero-Unwrap Lint
+        run: cargo clippy --all-targets -- -D warnings -D clippy::unwrap_used
+
+      - name: Gate 3: Rust Unit & Integration Tests
+        run: cargo test --verbose
+
+      - name: Gate 4: Read-Only Audit CLI Scanner
+        run: cargo run --bin smaos_audit
+
+  python-verification:
+    name: Multi-Track Python Conformance Verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+
+      - name: Run Python Parity & Scenario Tests
+        run: |
+          pytest -v tests/test_dora_conformance.py
+
+  blackbox-integrity:
+    name: Air-Gapped Black Box & JCS Parity Gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js for client verifier
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Gate 5: Zero External HTTP Dependencies Check
+        run: |
+          echo "Verifying dist/dora_tabletop_kit.html has zero external network dependencies..."
+          if grep -Ei '<(script|link)[^>]*(src|href)=["'"'"']https?://' dist/dora_tabletop_kit.html; then
+            echo "❌ ERROR: External network dependency detected in air-gapped HTML Black Box!"
+            exit 1
+          fi
+          echo "✅ PASSED: HTML Black Box is 100% self-contained and air-gap verified."
+
+      - name: Gate 6: JCS Merkle Chain Verification
+        run: |
+          node examples/offline_verifier.js dist/dora_tabletop_bundle.json
