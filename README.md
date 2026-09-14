@@ -179,6 +179,14 @@ For enterprises and consulting practices needing immediate validation:
 
 ---
 
+## Attestation — What is signed
+
+- Signed: JCS canonical SHA-256 of action receipt (action_id, payload_digest, disposition, observed_at), Merkle root in manifest.json
+- Key supply: local Ed25519 keypair generated on first run, stored in local keystore, never transmitted
+- Signature authenticates: integrity of local receipt file, not external-system truth, not DORA compliance, not production security
+- Replay/rollback: signatures include observed_at and event_id; verifier detects duplicate event_id but does not prevent external replay. Rollback detection requires bitemporal ledger in SMAOS Core (commercial)
+- Does NOT prove: external ledger settled, source data complete, or regulatory filing
+
 ## ⚠️ Scope & Limitations
 
 STAR Protocol is an evidence-reconstruction and verification artifact:
