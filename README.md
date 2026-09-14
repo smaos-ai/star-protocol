@@ -181,11 +181,11 @@ For enterprises and consulting practices needing immediate validation:
 
 ## Attestation — What is signed
 
-- Signed: JCS canonical SHA-256 of action receipt (action_id, payload_digest, disposition, observed_at), Merkle root in manifest.json
-- Key supply: local Ed25519 keypair generated on first run, stored in local keystore, never transmitted
-- Signature authenticates: integrity of local receipt file, not external-system truth, not DORA compliance, not production security
-- Replay/rollback: signatures include observed_at and event_id; verifier detects duplicate event_id but does not prevent external replay. Rollback detection requires bitemporal ledger in SMAOS Core (commercial)
-- Does NOT prove: external ledger settled, source data complete, or regulatory filing
+- **What is signed:** JCS-canonical receipt data is hashed with SHA-256; the resulting digest and Merkle root are included in the signed manifest.json.
+- **Key supply:** A locally generated Ed25519 keypair is stored locally and is not transmitted by the reference tool.
+- **Authenticates:** Integrity and provenance of the local receipt package relative to the signing key.
+- **Replay/rollback:** signatures include observed_at and event_id; verifier detects duplicate event_id but does not prevent external replay. Rollback detection requires bitemporal ledger in SMAOS Core (commercial).
+- **Does not prove:** External-ledger settlement, source-data completeness, DORA compliance, human authorization, or production security.
 
 ## ⚠️ Scope & Limitations
 
