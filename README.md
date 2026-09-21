@@ -15,7 +15,7 @@ When multi-step AI agents run autonomously, they introduce severe operational, f
 - **Unconfirmed Retries & Duplicate Dispatches**: Retrying unconfirmed actions without verifiable lineage creates duplicate wire transfers, database writes, or API transactions.
 - **Cloud Exfiltration & Audit Failure**: Exfiltrating raw execution logs, PII, and source code to third-party cloud dashboards violates data residency rules under **EU AI Act (Art. 12 & 14)** and **DORA (Art. 28)**.
 
-> **STAR Protocol closes the verification gap.** When downstream confirmation is missing, STAR preserves the record as `UNKNOWN` rather than assuming success, enforces 100% row-by-row conservation math (\\(\\Delta = 0\\)), cuts token overhead by 70–85%, and outputs a human-reviewable, auditor-ready evidence package.
+> **STAR Protocol closes the verification gap.** When downstream confirmation is missing, STAR preserves the record as `UNKNOWN` rather than assuming success, enforces 100% row-by-row conservation math (Δ = 0), cuts token overhead by 70–85%, and outputs a human-reviewable, auditor-ready evidence package.
 
 ---
 
@@ -31,7 +31,7 @@ When multi-step AI agents run autonomously, they introduce severe operational, f
 
 ### 3. Quantifiable Forensic ROI: 74 Hours ➔ ~0.4 Seconds
 * **Without STAR:** Following an agent execution failure, incident response teams spend up to 74 engineering hours manually cross-referencing application traces, Splunk logs, and database rows.
-* **With STAR:** `smaos-review` reconstructs the complete T0–T9 forensic timeline in **~0.4 seconds** while enforcing zero-delta (\\(\\Delta = 0\\)) row conservation math—proving 100% log reconciliation with zero dropped data.
+* **With STAR:** `smaos-review` reconstructs the complete T0–T9 forensic timeline in **~0.4 seconds** while enforcing zero-delta (Δ = 0) row conservation math—proving 100% log reconciliation with zero dropped data.
 
 ### 4. Schrems II & Air-Gap Egress Immunity
 * **Without STAR:** Monitoring autonomous agent sessions by exfiltrating prompt logs, database queries, and code to third-party US cloud SaaS dashboards violates European data residency rules.
@@ -44,7 +44,7 @@ When multi-step AI agents run autonomously, they introduce severe operational, f
 | Persona | **BEFORE STAR Protocol** (Standard Agent Setup) | **AFTER STAR Protocol** (STAR-Gated Pipeline) |
 | :--- | :--- | :--- |
 | **🧑‍💻 Dev Leads & Developers** | Context compaction drops safety recall to 10%. Agents pass superficial tests, break logic, and bottleneck PR reviews. | **~0.4s AST Merkle DAG checks** run locally at **$0 API cost**, automatically blocking out-of-bounds agent mutations. |
-| **🚨 Incident Response & SREs** | 74 hours spent manually sifting through Splunk logs and DB rows after silent 504 "swallow loops" corrupt production. | **< 1s T0–T9 forensic replay** with 100% row reconciliation (\\(\\Delta = 0\\)) and zero dropped error lines. |
+| **🚨 Incident Response & SREs** | 74 hours spent manually sifting through Splunk logs and DB rows after silent 504 "swallow loops" corrupt production. | **< 1s T0–T9 forensic replay** with 100% row reconciliation (Δ = 0) and zero dropped error lines. |
 | **📋 GRC Consultants & Auditors** | Unverifiable screenshots, "trust me" spreadsheets, and cloud SaaS graphs rejected during regulatory reviews. | **Deterministic 8-file audit package (`review/`)** with JCS SHA-256 Merkle paths verified **100% offline in 2 seconds**. |
 | **🛡️ CISOs & Risk Officers** | Internal code, credentials, and customer PII exfiltrated to US SaaS monitoring dashboards under EU AI Act / DORA. | **0-byte cloud egress** on air-gapped hardware. Supports BBS+ / SD-JWT selective disclosure for GDPR Article 17 redaction. |
 | **💳 CFOs & Financial Leads** | €150,000 sent twice due to unconfirmed 504 retries; exploding LLM API token bills from context window re-reads. | **Fail-closed `UNKNOWN` state lock** prevents duplicate disbursements; **70–85% token cost reduction** via incremental AST filtering. |
@@ -56,7 +56,7 @@ When multi-step AI agents run autonomously, they introduce severe operational, f
 | If your current pipeline experiences... | The Hidden Risk You Face | Do You Need STAR? |
 | :--- | :--- | :--- |
 | **Escalating API token costs & context bloat** | Paying for full context re-reads every turn due to agent flailing | **YES** — Cuts token spend 70–85% with local AST checks ($0 API cost). |
-| **Unconfirmed timeouts or dropped steps** | Unnoticed execution failures reporting false success | **YES** — Guarantees row conservation (\\(\\Delta = 0\\)). |
+| **Unconfirmed timeouts or dropped steps** | Unnoticed execution failures reporting false success | **YES** — Guarantees row conservation (Δ = 0). |
 | **Sending logs/code to SaaS dashboards** | Data residency & IP leak under EU AI Act / DORA | **YES** — 100% local, air-gapped, 0-byte cloud egress. |
 | **Prompt compaction / safety rule decay** | Agents dropping security bounds during long sessions | **YES** — Freezes code baselines with Ed25519 AST Merkle DAGs. |
 
@@ -87,7 +87,7 @@ $$\\text{Conservation Delta } (\\Delta) = 0$$
 | **Verification Speed** | **~0.4s / execution** | Sub-second AST Merkle DAG check on local developer hardware. |
 | **Token Cost Savings** | **70–85% Reduction** | Prevents context re-reads and prompt cache invalidation. |
 | **Cloud Egress** | **0 Bytes by design** | 100% air-gapped; sensitive code and telemetry never leave your machine. |
-| **Accounting Precision** | **\\(\\Delta = 0\\) Zero-Delta** | 100% row reconciliation; all malformed lines preserved with line numbers. |
+| **Accounting Precision** | **Δ = 0 Zero-Delta** | 100% row reconciliation; all malformed lines preserved with line numbers. |
 | **Audit Retention** | **7-Year Proof Trail** | Ed25519-signed JCS SHA-256 receipts stored in local SQLite/JSON. |
 
 *Local measurements on commodity developer hardware. You own the numbers.*
@@ -156,7 +156,7 @@ When STAR executes a batch review, it outputs a deterministic, human-reviewable 
 
 | # | Artifact Filename | Purpose & Regulatory Grounding |
 |---|---|---|
-| 1 | `conservation_scorecard.json` | Core zero-delta primary row accounting equation (\\(\\Delta = 0\\)) & secondary findings map. |
+| 1 | `conservation_scorecard.json` | Core zero-delta primary row accounting equation (Δ = 0) & secondary findings map. |
 | 2 | `unknown_exposure_inventory.json` | Detailed line-item log of unconfirmed timeouts (HTTP 504) and retry conflicts. |
 | 3 | `telemetry_gaps.json` | Schema gap analysis and degraded confidence flags. |
 | 4 | `evidence_insufficient_or_findings.json` | Structured 3-outcome verdict memo (`FINDINGS` / `NO FINDINGS` / `INSUFFICIENT`). |
