@@ -1,6 +1,6 @@
 # SMAOS: DORA AI Incident Closure Engine (`smaos-dora-kit`)
 
-[![CI](https://github.com/SovereignNexus/smaos-dora-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/SovereignNexus/smaos-dora-kit/actions)
+[![CI](https://github.com/smaos-ai/star-protocol/actions/workflows/ci.yml/badge.svg)](https://github.com/smaos-ai/star-protocol/actions)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Regulatory-Grade](https://img.shields.io/badge/Regulation-EU_2022%2F2554_(DORA)-emerald.svg)](LIMITATIONS.md)
 [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange.svg)](Cargo.toml)

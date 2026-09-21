@@ -113,7 +113,7 @@ class StarLegacyFreeze:
             # in-toto statement format for EU AI Act Article 12
             baseline_receipt = {
                 "_type": "https://in-toto.io/Statement/v0.1",
-                "subject": [{"name": "SovereignNexus", "digest": {"sha256": merkle_root}}],
+                "subject": [{"name": "SMAOS s.r.o.", "digest": {"sha256": merkle_root}}],
                 "predicateType": "https://slsa.dev/provenance/v0.2",
                 "predicate": {
                     "builder": {"id": "star-decadal-core-v1.0"},
