@@ -2,16 +2,16 @@
   "version": "1.0-decadal",
   "slsa_level": "SLSA_BUILD_LEVEL_3+",
   "receipt_type": "GOLDEN_BASELINE",
-  "timestamp": "2026-09-14T13:36:01Z",
+  "timestamp": "2026-09-22T08:00:47Z",
   "audit_truth_fields": {
     "authorization_decision": "PERMIT",
-    "human_principal": "sig:ed25519:6650fa5ef6fcfe8af2dd721ead1ee3a2",
-    "intent_mandate": "cd8ae04bc807016a356f6d9dd70a47af4de784de062d6b0259c9f0de1da4db3a",
+    "human_principal": "sig:ed25519:e7253f8d9290d6e64f8b8f5340f4d744",
+    "intent_mandate": "8324188bdcd75f2f81d0c21fa8132c73cdb0054eee7fbc920de3de2ab172993a",
     "environment_fingerprint": "b6f21b2900102f00221272242f2fbe073f57f29113509d7a9a640a4191f93e82",
-    "tamper_evidence": "412e433b8ed7d4d6b59ee7958875cc934296881aaa8cc373bb31b31be7f75f0a"
+    "tamper_evidence": "9ef8f1ce401fbf578360632848faea19729a26fc495814b689f0f3b1710fa59d"
   },
-  "merkle_root": "412e433b8ed7d4d6b59ee7958875cc934296881aaa8cc373bb31b31be7f75f0a",
-  "signature": "sig:ed25519:6650fa5ef6fcfe8af2dd721ead1ee3a2",
+  "merkle_root": "9ef8f1ce401fbf578360632848faea19729a26fc495814b689f0f3b1710fa59d",
+  "signature": "sig:ed25519:e7253f8d9290d6e64f8b8f5340f4d744",
   "offline_mode": true,
   "ast_node_count": 25,
   "retro_story_mappings": [
@@ -34,8 +34,8 @@
   "nodes": [
     {
       "file": "scripts/star_legacy_freeze.py",
-      "hash": "0339284812f1cf39e5eccce3559437f5c0d912f20f92f501f5130082982aa022",
-      "leaf_hash": "3ff042e6c0b9e48bc993f2f004f3038558f63382bde3bcd2d2870c8201fbaf7f",
+      "hash": "322ceca89a289e511f59385439b0ab61f4756a07497a990b47420b545299ff88",
+      "leaf_hash": "bb014944ce54d9d6f5ff84713689b02d145917729cf3b6e8c248e1223e75796e",
       "classes": [
         "StarLegacyFreeze"
       ],
@@ -205,8 +205,8 @@
     },
     {
       "file": "star_protocol/__init__.py",
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "leaf_hash": "bac91f9aa44921c5b2f7754574674635c2a3d4fd9f2719a4ee3b78a7bf4714fb",
+      "hash": "f99499768bd06b3153d16376240bb3bfe94deb7d8d4f3ea6bb950a29ec6ec623",
+      "leaf_hash": "b0179ab8322e8f6ba4d0ba0dbf3f5d51524d3e209d31470d4234baef1905961e",
       "classes": [],
       "functions_count": 0
     },
