@@ -28,11 +28,13 @@ from smaos_dora_kit import (
 
 def test_bundle_matches_rust_export():
     """Verify Python generated bundle matches Rust exported dora_tabletop_bundle.json."""
-    rust_bundle_path = (
-        Path("dist/dora_tabletop_bundle.json")
-        if Path("dist/dora_tabletop_bundle.json").exists()
-        else Path("dora_tabletop_bundle.json")
-    )
+    here = Path(__file__).resolve().parent.parent
+    candidates = [
+        here / "dist" / "dora_tabletop_bundle.json",
+        Path("dist/dora_tabletop_bundle.json"),
+        Path("dora_tabletop_bundle.json"),
+    ]
+    rust_bundle_path = next((p for p in candidates if p.exists()), candidates[0])
     assert rust_bundle_path.exists(), "dora_tabletop_bundle.json must exist"
 
     with open(rust_bundle_path, "r", encoding="utf-8") as f:
