@@ -165,19 +165,9 @@ When STAR executes a batch review, it outputs a deterministic, human-reviewable 
 | 7 | `processing_and_deletion_record.json` | Audit trail of local working file shredding and data handling (*not* a statutory Certificate of Deletion). |
 | 8 | `manifest.json` | Cryptographic file manifest containing JCS SHA-256 Merkle roots, file digests, commit hash, and Ed25519 signature. |
 
-> **Note on ServiceNow Connector:** Scope is 250 rows JSONL. **No ServiceNow export in €750 package**, kept for €3,500 sprint or separate connector.
-
 ---
 
-## 💼 Commercial Feasibility Sprint (€750)
-
-For enterprises and consulting practices needing immediate validation:
-
-- **Scope:** Review of up to 250 customer-approved or synthetic agent execution records.
-- **Deliverables:** Complete 8-file audit package (`review/`) including zero-delta scorecard, unknown exposure inventory, and telemetry-gap report delivered within 48 hours.
-- **Credit Guarantee:** Full €750 fee credited toward a full €3,500 Forensic Review signed within 60 days.
-
----
+## 🏛️ Verification Architecture & Attestation
 
 ## Attestation — What is signed
 
