@@ -22,7 +22,7 @@ Usage:
 Options:
   --source-contract <PATH>   Path to source extraction contract (default: fixtures/source_contract.json)
   --output <PATH>            Path to output deliverables directory (default: review)
-  --bundle-mode <MODE>       Deliverable mode: star750 (default for <=250 rows) or dora10day
+  --bundle-mode <MODE>       Deliverable mode: star (default for <=250 rows) or dora10day
   --help                     Print this help message
 ================================================================================
 "#
@@ -79,7 +79,7 @@ fn main() {
                     } else if mode_str == "dora10day" || mode_str == "pilot" || mode_str == "dora" {
                         explicit_bundle_mode = Some(BundleMode::DoraTenDay);
                     } else {
-                        eprintln!("❌ Unrecognized --bundle-mode: {}. Expected: star750 | dora10day", args[i + 1]);
+                        eprintln!("❌ Unrecognized --bundle-mode: {}. Expected: star | dora10day", args[i + 1]);
                         process::exit(1);
                     }
                     i += 2;
@@ -153,7 +153,7 @@ fn main() {
     println!("Output Directory:  {}", output_path);
     match bundle_mode {
         BundleMode::StarFeasibility => {
-            println!("Sprint Package:    STAR €750 Data Feasibility Sprint (8-File Package)");
+            println!("Evaluation Mode:   STAR Feasibility Evaluation (8-File Package)");
             println!("Statutory Anchors: EU AI Act Arts. 12 & 14 • DORA Arts. 18, 19, 28 • RTS 2025/301");
         }
         BundleMode::DoraTenDay => {

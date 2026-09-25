@@ -31,7 +31,7 @@ pub enum ReviewError {
 /// Execution Bundle Mode.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default, Serialize, Deserialize)]
 pub enum BundleMode {
-    /// €750 STAR Feasibility Sprint 8-file package (as specified in STAR Protocol README)
+    /// STAR Feasibility Evaluation 8-file package (as specified in STAR Protocol README)
     #[default]
     StarFeasibility,
     /// Full 10-Day Pilot package with ServiceNow IRM & DORA Annex I
@@ -229,7 +229,7 @@ pub struct ArtifactDigest {
 }
 
 // ----------------------------------------------------------------------------
-// STAR Protocol Feasibility Deliverable Types (8-file package for €750 sprint)
+// STAR Protocol Feasibility Deliverable Types (8-file package for feasibility evaluation)
 // ----------------------------------------------------------------------------
 
 /// Telemetry gap analysis report (`telemetry_gaps.json`).
@@ -707,7 +707,7 @@ impl ReviewProcessor {
         Ok(scorecard)
     }
 
-    /// Writes the €750 STAR Feasibility Sprint 8-File Package (README spec).
+    /// Writes the STAR Feasibility Evaluation 8-File Package (README spec).
     #[allow(clippy::too_many_arguments)]
     fn write_star_feasibility_package(
         &self,
@@ -909,7 +909,7 @@ impl ReviewProcessor {
 
 **Document Type:** 1-Page Human-in-the-Loop & Statutory Demarcation Memorandum  
 **Statutory Anchors:** EU AI Act (Regulation 2024/1689) Arts. 12 & 14 • DORA (Regulation 2022/2554) Arts. 18, 19 & 28  
-**Package:** €750 Data Feasibility Sprint (Up to 250 records)  
+**Package:** STAR Feasibility Evaluation (Up to 250 records)  
 
 ---
 
@@ -927,7 +927,7 @@ STAR Protocol (`star-protocol`) and SMAOS operate strictly as a **read-only fore
 1. **Pre-Ingestion Completeness Unproven:** STAR audits only the records extracted and declared in the source contract. It does not prove that source systems logged all relevant events prior to extraction.
 2. **No Automated Regulatory Classification:** Human risk officers and incident managers remain strictly authoritative under EU AI Act Art. 14 and DORA Art. 18. STAR does not submit filings to NCAs or make autonomous legal classifications.
 3. **No Proof of External-System Truth:** A confirmed receipt proves local transmission and telemetry reception; it does not guarantee the solvency or internal consistency of external bank ledgers.
-4. **Local Verification Artifact:** This feasibility sprint package is a technical verification deliverable. It does not constitute a formal Threat-Led Penetration Testing (TLPT) certification or regulatory signoff.
+4. **Local Verification Artifact:** This feasibility evaluation package is a technical verification deliverable. It does not constitute a formal Threat-Led Penetration Testing (TLPT) certification or regulatory signoff.
 "#;
         fs::write(out_dir.join("limitations.md"), limitations_content)?;
 
@@ -935,7 +935,7 @@ STAR Protocol (`star-protocol`) and SMAOS operate strictly as a **read-only fore
         let shredding_record = ProcessingAndDeletionRecord {
             record_type: "LOCAL_PROCESSING_AND_SHREDDING_AUDIT_TRAIL".into(),
             legal_notice: "This document is a technical audit trail of local volatile memory scrubbing and temporary scratch retention cleanup. It explicitly does NOT constitute a statutory Certificate of Deletion or legal destruction warranty.".into(),
-            sprint_reference: "STAR_EUR750_DATA_FEASIBILITY_SPRINT".into(),
+            sprint_reference: "STAR_DATA_FEASIBILITY_EVALUATION".into(),
             execution_timestamp_iso: now.to_rfc3339(),
             process_id: std::process::id(),
             host_environment: "local-airgapped-workstation".into(),
@@ -1002,7 +1002,7 @@ STAR Protocol (`star-protocol`) and SMAOS operate strictly as a **read-only fore
 
         let manifest = StarManifest {
             manifest_version: "1.0.5".into(),
-            sprint_type: "STAR_EUR750_DATA_FEASIBILITY_SPRINT".into(),
+            sprint_type: "STAR_DATA_FEASIBILITY_EVALUATION".into(),
             correlation_id: "STAR-FEASIBILITY-2026-09-001".into(),
             git_commit_hash: "16643bbef4e4f13383f34b28f07886db308691e4".into(),
             generated_at_iso: now.to_rfc3339(),

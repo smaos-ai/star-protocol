@@ -2,7 +2,7 @@
 
 **Document Type:** 1-Page Human-in-the-Loop & Statutory Demarcation Memorandum  
 **Statutory Anchors:** EU AI Act (Regulation 2024/1689) Arts. 12 & 14 • DORA (Regulation 2022/2554) Arts. 18, 19 & 28  
-**Package:** €750 Data Feasibility Sprint (Up to 250 records)  
+**Package:** STAR Feasibility Evaluation (Up to 250 records)  
 
 ---
 

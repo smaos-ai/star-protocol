@@ -1,6 +1,6 @@
 {
   "manifest_version": "1.0.5",
-  "sprint_type": "STAR_EUR750_DATA_FEASIBILITY_SPRINT",
+  "sprint_type": "STAR_DATA_FEASIBILITY_EVALUATION",
   "correlation_id": "STAR-FEASIBILITY-2026-09-001",
   "git_commit_hash": "16643bbef4e4f13383f34b28f07886db308691e4",
   "generated_at_iso": "2026-09-14T13:35:29.900729+00:00",
