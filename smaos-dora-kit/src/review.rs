@@ -1,4 +1,4 @@
-//! 10-Day Unknown Exposure Review Engine & STAR Feasibility Sprint Package.
+//! 10-Day Unknown Exposure Review Engine & STAR Feasibility Evaluation Package.
 //! Implements row-level input conservation (Δ = 0), counterfactual blast-radius replay,
 //! telemetry gap analysis, 3-outcome verdict reporting, local memory shredding audit trail,
 //! and cryptographic JCS SHA-256 Merkle root & Ed25519 receipt generation.

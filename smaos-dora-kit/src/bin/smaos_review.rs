@@ -157,7 +157,7 @@ fn main() {
             println!("Statutory Anchors: EU AI Act Arts. 12 & 14 • DORA Arts. 18, 19, 28 • RTS 2025/301");
         }
         BundleMode::DoraTenDay => {
-            println!("Sprint Package:    10-Day Unknown Exposure Pilot Package (with ServiceNow IRM)");
+            println!("Evaluation Mode:   10-Day Unknown Exposure Evaluation Package (with ServiceNow IRM)");
             println!("Statutory Anchors: EU 2022/2554 (DORA) Arts. 18, 19, 24 & RTS 2025/301");
         }
     }
@@ -247,7 +247,7 @@ fn main() {
                 BundleMode::DoraTenDay => {
                     println!(
                         "
-📦 GENERATED CLIENT PILOT DELIVERABLES IN '{}':",
+📦 GENERATED EVALUATION DELIVERABLES IN '{}':",
                         output_path
                     );
                     println!("  [1] conservation_scorecard.json       (Zero-delta row accounting manifest)");
