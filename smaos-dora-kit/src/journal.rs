@@ -168,8 +168,9 @@ fn canonicalize_json_value(v: &serde_json::Value) -> String {
     }
 }
 
+#[derive(Debug, Clone)]
 pub struct DoraJournal {
-    events: Vec<JournalEvent>,
+    pub events: Vec<JournalEvent>,
     file_path: Option<String>,
 }
 
