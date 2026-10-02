@@ -3,3 +3,5 @@ members = [
     "smaos-dora-kit",
 ]
 resolver = "2"
+
+# TODO(v0.4.0): Add native Rust unit tests for core verification logic.
